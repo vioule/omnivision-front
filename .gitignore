@@ -1,0 +1,16 @@
+.idea/
+node_modules/
+
+# Auto build directories and files
+public/
+coverage/
+
+# Eclipse / IDE / Environment
+.npmrc
+.project
+.settings
+.tern-project
+
+# OSX
+.DS_Store
+.gitlab-ci.yml

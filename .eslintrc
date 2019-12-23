@@ -1,0 +1,42 @@
+{
+    "extends": ["airbnb", "plugin:flowtype/recommended"],
+    "parser": "babel-eslint",
+    "plugins": ["flowtype"],
+    "rules": {
+      "react/prefer-stateless-function": 1,
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/sort-comp": [1, {
+        "order": [
+          "type-annotations",
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ]
+      }]
+    },
+    "globals": {
+      "SyntheticEvent": true,
+      "SyntheticInputEvent": true,
+      "google": true,
+      "$PropertyType": true,
+      "ReactClass": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "jest": true,
+      "browser": true
+    },
+    "settings": {
+      "flowtype": {
+        "onlyFilesWithFlowAnnotation": true
+      }
+    }
+  }
+  
