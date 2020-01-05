@@ -28,7 +28,9 @@ You have to run this command each time the `docker-compose.yml` file is updated.
 ### Starting working
 
 #### Environment configuration
-To enable the application to run, you have to create the file `.npmrc`
+To enable the application to run, you have to create the file `.npmrc`.
+The `.npmrc` is the default configuration file for npm scripts.
+
 Inside this file, thanks to add this configuration :
 ```
 env="localhost"

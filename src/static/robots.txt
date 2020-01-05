@@ -1,0 +1,12 @@
+# Allow all search engine
+User-agent: *
+
+# Define max crawling delay of search engine (in seconds)
+Crawl-delay: 300
+
+# Define sitemap file location
+Sitemap: /sitemap.xml
+
+# Prevent files from crawling by search engine
+Disallow: *data:*$
+Disallow: *base64*$
