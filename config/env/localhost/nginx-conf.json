@@ -1,0 +1,11 @@
+{
+  "authentication": "off",
+  "accessLog": "/dev/stdout main",
+  "errorLog": "/dev/stdout warn",
+  "headerXFrameOptions": false,
+  "port": "8080",
+  "serverName": "localhost",
+  "withProxy": false,
+  "workerConnections": "4096",
+  "workerProcesses": "auto"
+}

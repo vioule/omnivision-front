@@ -1,4 +1,6 @@
 src/static
-public
+public/*
 coverage/
 flow-typed/
+static/*
+config/*

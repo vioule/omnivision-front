@@ -1,0 +1,15 @@
+{
+  "automock": false,
+  "testURL": "http://localhost/",
+  "coverageReporters": [
+    "json",
+    "html"
+  ],
+  "transform": {
+    "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
+    "^(?!.*\\.(js|jsx|json)$)": "<rootDir>/config/jest/fileTransform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+  ]
+}
