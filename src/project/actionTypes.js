@@ -1,0 +1,5 @@
+import { NAME } from './constants';
+
+export const GET_PROJECTS_REQUEST = `${NAME}/GET_PROJECTS_REQUEST`;
+export const GET_PROJECTS_RESPONSE = `${NAME}/GET_PROJECTS_RESPONSE`;
+export const GET_PROJECTS_FAILED = `${NAME}/GET_PROJECTS_FAILED`;

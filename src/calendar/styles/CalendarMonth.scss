@@ -1,0 +1,12 @@
+@import '../../core/styles/variables.scss';
+
+.calendar-month {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 290px;
+
+  .calendar-header  {
+    font-size: 10px;
+  }
+}
