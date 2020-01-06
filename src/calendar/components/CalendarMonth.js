@@ -142,4 +142,5 @@ const mapDispatch = (dispatch: Dispatch) => bindActionCreators({
   selectZoomLevel: calendarActions.selectZoomLevel,
 }, dispatch);
 
+export { CalendarMonth };
 export default connect(mapState, mapDispatch)(CalendarMonth);

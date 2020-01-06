@@ -17,7 +17,6 @@ import '../styles/Calendar.scss';
 
 type Props = {
   zoomLevel: string,
-  selectDate: (date: moment) => void,
   selectZoomLevel: (zoomLevel: string) => void,
 };
 
@@ -56,12 +55,12 @@ const Calendar = (props: Props) => {
 };
 
 const mapState = (state: Object) => ({
-  zoomLevel: calendarSelectors.zoomLevelSelect(state),
+  zoomLevel: calendarSelectors.zoomLevelSelector(state),
 });
 
 const mapDispatch = (dispatch: Dispatch) => bindActionCreators({
-  selectDate: calendarActions.selectCalendarDate,
   selectZoomLevel: calendarActions.selectZoomLevel,
 }, dispatch);
 
+export { Calendar };
 export default connect(mapState, mapDispatch)(Calendar);

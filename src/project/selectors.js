@@ -1,9 +1,9 @@
 import { createSelector } from 'reselect';
 
-import * as coreConstants from '../core/constants';
-import * as projectsConstants from './constants';
+import * as projectConstants from './constants';
+import * as projectHelpers from './helpers';
 
-export const projectsStateSelector = (state) => state[projectsConstants.NAME];
+export const projectsStateSelector = (state) => state[projectConstants.NAME];
 
 export const projectsSelector = createSelector(
   projectsStateSelector,
@@ -17,14 +17,10 @@ export const projectsCollectionSelector = createSelector(
 
 export const projectsNavBarSelector = createSelector(
   projectsCollectionSelector,
-  (projects) => {
-    const navList = [...projectsConstants.NAV_LIST_DEFAULT];
-    projects.forEach((project) => {
-      navList.push({
-        label: project.name,
-        link: `${coreConstants.PATHS.PROJECT}/${project.id}`,
-      });
-    });
-    return navList;
-  }
+  (projects) => (
+    [
+      ...projectConstants.NAV_LIST_DEFAULT,
+      ...projectHelpers.convertProjectsAsNavLinks(projects),
+    ]
+  )
 );

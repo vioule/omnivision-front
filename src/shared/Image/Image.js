@@ -13,6 +13,7 @@ type Props = {
 
 const Image = (props: Props) => {
   const { alt, className, defaultImg, onClick, src, title } = props;
+  if (!src) return null;
 
   return (
     <ImageBase

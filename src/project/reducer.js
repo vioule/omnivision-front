@@ -15,7 +15,7 @@ export const getProjectRequest = (state: State): State => ({
   ...state,
   projects: {
     ...state.projects,
-    isLoading: false,
+    isLoading: true,
   },
 });
 

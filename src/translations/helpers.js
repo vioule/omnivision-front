@@ -13,5 +13,6 @@ export const setLocale = (locale) => {
 
 export const translate = (name = 'default', language) => {
   const locale = language && translations[language] ? language : getLocale();
-  return translations[locale][name];
+  const translated = translations[locale][name];
+  return translated || name;
 };

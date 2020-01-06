@@ -4,8 +4,8 @@ import React from 'react';
 import './Spinner.scss';
 
 type Props = {
-  className: ?string,
-  style: ?string,
+  className?: string,
+  style?: string,
 };
 
 const styles = [
@@ -26,6 +26,11 @@ export const Spinner = (props: Props) => {
       <span className="spinner-icon" />
     </div>
   );
+};
+
+Spinner.defaultProps = {
+  className: null,
+  style: 'primary',
 };
 
 export default Spinner;

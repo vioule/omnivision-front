@@ -119,4 +119,5 @@ const mapDispatch = (dispatch: Dispatch) => bindActionCreators({
   selectDate: calendarActions.selectCalendarDate,
 }, dispatch);
 
+export { CalendarWeek };
 export default connect(mapState, mapDispatch)(CalendarWeek);

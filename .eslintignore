@@ -4,3 +4,4 @@ coverage/
 flow-typed/
 static/*
 config/*
+*.spec.js

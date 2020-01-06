@@ -40,4 +40,5 @@ const mapDispatch = (dispatch: Dispatch) => bindActionCreators({
   getProjectsList: projectActions.getProjectsList,
 }, dispatch);
 
+export { App };
 export default connect(mapState, mapDispatch)(App);

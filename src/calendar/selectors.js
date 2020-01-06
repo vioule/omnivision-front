@@ -5,7 +5,7 @@ import * as calendarConstants from './constants';
 
 export const calendarStateSelector = (state) => state[calendarConstants.NAME];
 
-export const zoomLevelSelect = createSelector(
+export const zoomLevelSelector = createSelector(
   calendarStateSelector,
   (state) => state.zoomLevel
 );

@@ -2,6 +2,8 @@
 import moment from 'moment';
 
 import type { Project } from './models';
+import type { NavLink } from '../header/models';
+import * as coreConstants from '../core/constants';
 
 export const parseProjectsCollection = (collection: Array<Object>): Array<Project> => {
   if (!collection || !collection.length) return [];
@@ -22,4 +24,12 @@ export const parseProjectsCollection = (collection: Array<Object>): Array<Projec
       resources,
     };
   });
+};
+
+export const convertProjectsAsNavLinks = (projects: Array<Object>): Array<NavLink> => {
+  if (!projects || !projects.length) return [];
+  return projects.map((project) => ({
+    label: project.name,
+    link: `${coreConstants.PATHS.PROJECT}/${project.id}`,
+  }));
 };

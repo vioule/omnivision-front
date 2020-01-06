@@ -73,4 +73,5 @@ const mapState = (state: Object) => ({
   navProjects: projectsSelectors.projectsNavBarSelector(state),
 });
 
+export { Header };
 export default connect(mapState)(Header);
