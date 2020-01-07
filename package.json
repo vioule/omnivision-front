@@ -25,6 +25,7 @@
     "eslint": "eslint --config=.eslintrc ./",
     "flow": "flow --show-all-errors; test $? -eq 0 -o $? -eq 2",
     "full:dev": "npm i; npm run statics; npm run build:dev",
+    "full:prod": "npm run statics; npm run build",
     "statics": "npm run static:nginx && npm run static:files",
     "static:nginx": "node ./tasks/nginx-conf.js; node ./tasks/nginx-static.js",
     "static:files": "node ./tasks/statics.js",

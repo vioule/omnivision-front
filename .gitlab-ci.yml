@@ -1,0 +1,68 @@
+image: node:12-stretch
+
+stages:
+  - Build
+  - Lint
+  - Test
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules
+    - .yarn
+
+before_script:
+  - apt-get update -qq && apt-get install
+
+build:
+  stage: Build
+  only:
+    - dev
+    - master
+    - merge_requests
+  before_script:
+    - yarn config set cache-folder .yarn
+    - yarn install
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - node_modules
+      - .yarn
+  script:
+    - npm run full:prod
+
+stylelint:
+  stage: Lint
+  only:
+    - dev
+    - master
+    - merge_requests
+  script:
+    - npm run stylelint
+
+eslint:
+  stage: Lint
+  only:
+    - dev
+    - master
+    - merge_requests
+  script:
+    - npm run eslint
+
+flow:
+  stage: Lint
+  only:
+    - dev
+    - master
+    - merge_requests
+  script:
+    - npm run flow
+
+test:
+  stage: Test
+  only:
+    - dev
+    - master
+    - merge_requests
+  script:
+    - npm run test

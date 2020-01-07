@@ -14,4 +14,3 @@ nginx.conf
 
 # OSX
 .DS_Store
-.gitlab-ci.yml
