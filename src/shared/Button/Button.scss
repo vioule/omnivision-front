@@ -1,0 +1,141 @@
+@import '../../core/styles/variables';
+
+$border-size: 1px;
+$padding-horizontal: 40px;
+$padding-horizontal-bordered: $padding-horizontal - $border-size;
+$padding-vertical: 12px;
+
+.button {
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: $semi-bold;
+  justify-content: center;
+  letter-spacing: 1.5px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  user-select: none;
+
+  &:focus,
+  &:active,
+  &:active:focus {
+    outline: none;
+  }
+
+  .button-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $padding-vertical $padding-horizontal;
+  }
+
+  &.button-small .button-inner {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+
+  &.button-primary {
+    background-color: $blue;
+    color: $white;
+
+    &:focus,
+    &:active,
+    &:active:focus {
+      background-color: $dark-blue;
+    }
+
+    &-negative {
+      background-color: transparent;
+      border: $border-size solid $blue;
+      color: $blue;
+    }
+  }
+
+  &.button-secondary {
+    background-color: $gold;
+    color: $black;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+      background-color: $dark-gold;
+    }
+
+    &-negative {
+      background-color: transparent;
+      border: $border-size solid $gold;
+      color: $gold;
+    }
+  }
+
+  &.button-tertiary {
+    background-color: $red;
+    color: $white;
+
+    &:focus,
+    &:active,
+    &:active:focus {
+      background-color: $dark-red;
+    }
+
+    &-negative {
+      background-color: transparent;
+      border: $border-size solid $red;
+      color: $red;
+    }
+  }
+
+  &.button-quaternary {
+    background-color: $light-gray;
+    color: $white;
+
+    &:focus,
+    &:active,
+    &:active:focus {
+      background-color: $dark-gray;
+    }
+
+    &-negative {
+      background-color: transparent;
+      border: $border-size solid $light-gray;
+      color: $black;
+    }
+  }
+
+  &.button-disabled {
+    background-color: rgba($light-gray, 0.5);
+    border-color: rgba($light-gray, 0.5);
+    color: $light-gray;
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+      background-color: rgba($light-gray, 0.5);
+    }
+  }
+
+  &.button-loading {
+    .button-inner {
+      padding-left: 5px;
+    }
+
+    .spinner {
+      margin: 7px;
+
+      span {
+        border-width: 3px;
+        height: 25px;
+        width: 25px;
+      }
+    }
+  }
+}

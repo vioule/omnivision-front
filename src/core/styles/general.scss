@@ -1,0 +1,67 @@
+@import "variables";
+
+body,
+html {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $light;
+  font-style: normal;
+  color: $black;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+
+  &.fixed {
+    // used to remove body scroll when mobile menu visible in order to remove
+    // double scrolling on iOS Safari
+    overflow: hidden;
+    position: fixed;
+  }
+
+  #root {
+    height: 100%;
+
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+
+      .container {
+        display: flex;
+        flex: 1 0 auto;
+      }
+
+      .wrapper {
+        // wrapper will need to be flex container itself, otherwise nested
+        // elements will not be able to use its full height due to the
+        // weird ways flexbox works (especially on Chrome and IE11)
+        display: flex;
+        flex-direction: row;
+        flex: 1 0 auto;
+      }
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  transition: all .1s ease-in-out;
+}

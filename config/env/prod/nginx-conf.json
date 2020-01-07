@@ -1,0 +1,11 @@
+{
+  "authentication": "off",
+  "accessLog": "/var/log/nginx/access.log main",
+  "errorLog": "/var/log/nginx/error.log warn",
+  "headerXFrameOptions": "ALLOWALL",
+  "port": "80",
+  "serverName": "vision.omnilog.fr",
+  "withProxy": false,
+  "workerConnections": "1024",
+  "workerProcesses": "1"
+}

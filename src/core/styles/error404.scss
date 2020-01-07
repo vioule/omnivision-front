@@ -1,0 +1,121 @@
+@import 'variables.scss';
+
+.error-404 {
+  align-items: center;
+  background-color: $blue;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 55px;
+  width: 100vw;
+
+  @keyframes eye {
+    0% ,30% , 55%, 90% , 100% { transform: translate(0, 0); }
+    10%, 25% { transform: translate(0, 20px); }
+    65% { transform: translate(-20px, 0); }
+    80% { transform: translate(20px, 0); }
+  }
+
+  @keyframes frighten {
+    0% { transform: translate(1px); }
+    50% { transform: translate(0); }
+    100% { transform: translate(-1px); }
+  }
+
+  @keyframes text-rotate {
+    to { text-indent: -373px; }
+  }
+
+  .head {
+    animation: frighten .2s infinite;
+    display: block;
+    margin: 10% auto 0;
+    position: relative;
+    width: 200px;
+
+    &::after{
+      content: '';
+      animation: eye 2.5s infinite;
+      background: $blue;
+      border-radius: 50%;
+      box-shadow: 125px 0 0 $blue;
+      height: 20px;
+      left: 25px;
+      position: absolute;
+      top: 30px;
+      width: 20px;
+    }
+  }
+
+  .eyes {
+    background: $white;
+    border-radius: 50% 50% 50% 50% / 45px 45px 45% 45%;
+    display: inline-block;
+    height: 80px;
+    position: relative;
+    transform: rotate(30deg);
+    width: 75px;
+
+    &::after{
+      content: '';
+      border-bottom: 2px solid $white;
+      border-radius: 50%;
+      bottom: -10px;
+      height: 50px;
+      left: 0px;
+      position: absolute;
+      width: 70px;
+    }
+
+    &::before{
+      bottom: auto;
+      left: 0;
+      top: -100px;
+      transform: rotate(30deg);
+    }
+
+    &:nth-of-type(2){
+      float: right;
+      transform: rotate(-30deg);
+
+      &::after{
+        left: 5px;
+      }
+    }
+  }
+
+  .error-number {
+    color: $white;
+    display: block;
+    font-size: 80px;
+    font-weight: $bold;
+    margin-top: 30px;
+  }
+
+  .error-message {
+    $semi-bold: 600;
+    color: $white;
+    font-size: 30px;
+    margin: -20px auto 20px;
+  }
+
+  .error-alerts {
+    text-align: center;
+    color: $white;
+
+    &::after {
+      content: 'Got lost? How.....? Why.....?';
+      animation: text-rotate 2s infinite steps(3);
+      color: $green;
+      display: inline-block;
+      font-size: 30px;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 120px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# EditorConfig to configure all IDE
+# With same rules
+
+# Main editorConfig of the project
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+tab_width = 2
+trim_trailing_whitespace = true
+
+[*.{js, css}]
+indent_style = space
+indent_size = 2
+tab_width = 2

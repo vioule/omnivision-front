@@ -4,6 +4,7 @@ node_modules/
 # Auto build directories and files
 public/
 coverage/
+nginx.conf
 
 # Eclipse / IDE / Environment
 .npmrc
@@ -13,4 +14,3 @@ coverage/
 
 # OSX
 .DS_Store
-.gitlab-ci.yml

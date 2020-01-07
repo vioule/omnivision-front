@@ -1,0 +1,13 @@
+# NODE IMAGE DOCKER
+# USED INTO THE OMNIVISION FRONT DEV PROJECT
+
+FROM node:12-stretch
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  zip
+
+RUN mkdir -p /var/app
+ADD * /var/app/
+WORKDIR /var/app
+
+VOLUME /var/app

@@ -1,42 +1,76 @@
 {
-    "extends": ["airbnb", "plugin:flowtype/recommended"],
-    "parser": "babel-eslint",
-    "plugins": ["flowtype"],
-    "rules": {
-      "react/prefer-stateless-function": 1,
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-      "react/sort-comp": [1, {
-        "order": [
-          "type-annotations",
-          "static-methods",
-          "lifecycle",
-          "everything-else",
-          "render"
+  "extends": ["airbnb", "eslint:recommended", "plugin:flowtype/recommended"],
+  "parser": "babel-eslint",
+  "plugins": ["flowtype"],
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/sort-comp": [1, {
+      "order": [
+        "type-annotations",
+        "static-methods",
+        "lifecycle",
+        "everything-else",
+        "render"
+      ],
+      "groups": {
+        "lifecycle": [
+          "statics",
+          "state",
+          "propTypes",
+          "contextTypes",
+          "defaultProps",
+          "constructor",
+          "componentDidMount",
+          "shouldComponentUpdate",
+          "componentDidUpdate",
+          "componentWillUnmount",
+          "componentDidCatch"
         ]
-      }]
-    },
-    "globals": {
-      "SyntheticEvent": true,
-      "SyntheticInputEvent": true,
-      "google": true,
-      "$PropertyType": true,
-      "ReactClass": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 7,
-      "ecmaFeatures": {
-        "jsx": true
       }
-    },
-    "env": {
-      "es6": true,
-      "jest": true,
-      "browser": true
-    },
-    "settings": {
-      "flowtype": {
-        "onlyFilesWithFlowAnnotation": true
-      }
+    }],
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "never"
+    }],
+    "import/no-named-as-default": 0,
+    "import/prefer-default-export": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "object-curly-newline": 0,
+    "no-extra-boolean-cast": 0,
+    "no-plusplus": 0,
+    "react/jsx-fragments": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-array-index-key": 0,
+    "react/no-danger": 0,
+    "react/prefer-stateless-function": 1,
+    "react/style-prop-object": 0
+  },
+  "globals": {
+    "SyntheticEvent": true,
+    "SyntheticInputEvent": true,
+    "google": true,
+    "$PropertyType": true,
+    "ReactClass": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "jest": true,
+    "browser": true
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
     }
   }
-  
+}

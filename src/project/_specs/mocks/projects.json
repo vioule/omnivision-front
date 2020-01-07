@@ -1,0 +1,41 @@
+[{
+  "id": 1,
+  "name": "SFCO",
+  "description": "Mock Project : Project SFCO",
+  "startDate": "2018-02-02",
+  "endDate": "2020-12-31",
+  "days": 2000,
+  "resources": [{
+    "name": "Chef de projet",
+    "description": "Mock Resource : Chef de projet",
+    "days": 20
+  }, {
+    "name": "Dev Back",
+    "description": "Mock Resource : Dev Back PHP",
+    "days": 1200
+  }, {
+    "name": "Dev Front",
+    "description": "Mock Resource : Dev Front Web",
+    "days": 780
+  }]
+}, {
+  "id": 2,
+  "name": "ELSIE",
+  "description": "Mock Project : Project ELSIE",
+  "startDate": "2020-01-01",
+  "endDate": "2020-02-05",
+  "days": 58,
+  "resources": [{
+    "name": "Chef de projet",
+    "description": "Mock Resource : Chef de projet",
+    "days": 14
+  }, {
+    "name": "Dev Back",
+    "description": "Mock Resource : Dev Back PHP",
+    "days": 22
+  }, {
+    "name": "Dev Front",
+    "description": "Mock Resource : Dev Front Web",
+    "days": 22
+  }]
+}]

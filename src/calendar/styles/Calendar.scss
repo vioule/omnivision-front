@@ -1,0 +1,128 @@
+@import '../../core/styles/variables.scss';
+
+.calendar {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+
+  .zoom-levels {
+    margin: 20px auto;
+
+    .button {
+      background-color: $light-gray;
+      border-bottom: 2px solid $dark-blue;
+      border-left: 1px solid rgba($dark-blue, 0.2);
+      border-radius: 0;
+      border-right: 1px solid rgba($dark-blue, 0.2);
+      border-top: 2px solid $dark-blue;
+      color: $dark-gray;
+      height: 33px;
+
+      &:first-child {
+        border-bottom-left-radius: 20px;
+        border-left: 2px solid $dark-blue;
+        border-top-left-radius: 20px;
+      }
+
+      &:last-child {
+        border-bottom-right-radius: 20px;
+        border-right: 2px solid $dark-blue;
+        border-top-right-radius: 20px;
+      }
+
+      &.active {
+        background-color: rgba($blue, 0.8);
+        color: $white;
+      }
+    }
+
+    .button-inner {
+      font-size: 10px;
+      letter-spacing: 1;
+      margin: 3px;
+      min-width: 80px;
+      padding: unset;
+    }
+  }
+
+  .calendar-nav,
+  .calendar-table {
+    align-items: center;
+    text-align: center;
+    user-select: none;
+    width: 100%;
+  }
+
+  .calendar-table {
+    margin-top: 20px;
+  }
+
+  .calendar-icon {
+    display: block;
+    margin: auto;
+    width: 32px;
+  }
+
+  .calendar-nav-value {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .calendar-nav-label::first-letter {
+    text-transform: uppercase;
+  }
+
+  .calendar-nav-description {
+    font-size: 10px;
+  }
+
+  .calendar-header  {
+    border-right: 1px solid $gray;
+    border-top: 1px solid $gray;
+    margin: 0;
+    width: inherit;
+  }
+
+  .calendar-row {
+    border-right: 1px solid $gray;
+    margin: 0;
+    width: inherit;
+  }
+
+  .project-name {
+    align-items: center;
+    border-bottom: 1px solid $gray;
+    border-left: 1px solid $gray;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: 12px;
+    min-width: 75px;
+    padding: 0 5px;
+  }
+
+  .calendar-cell {
+    align-items: center;
+    border-bottom: 1px solid $gray;
+    border-left: 1px solid $gray;
+    display: flex;
+    flex-shrink: 0;
+    height: 30px;
+    justify-content: center;
+    padding: 0 2px;
+    width: 30px;
+
+    &.active {
+      background-color: rgba($green, 0.5);
+    }
+
+    &.disable {
+      background-color: $light-gray;
+    }
+
+    span::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
