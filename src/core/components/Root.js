@@ -9,6 +9,8 @@ import App from './App';
 import Error404 from './Error404';
 import HomePage from '../../home/components/HomePage';
 import Calendar from '../../calendar/components/Calendar';
+import Projects from '../../project/components/Projects';
+import Project from '../../project/components/Project';
 
 import '../styles/index.scss';
 
@@ -26,6 +28,8 @@ class Root extends PureComponent<Props, State> {
           <Switch>
             <Route exact path={ROUTING.DEFAULT.PATH} component={HomePage} />
             <Route path={ROUTING.CALENDAR.PATH} component={Calendar} />
+            <Route path={ROUTING.PROJECTS.PATH} component={Projects} />
+            <Route path={ROUTING.PROJECT.PATH} component={Project} />
             <Route component={Error404} />
           </Switch>
         </App>

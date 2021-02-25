@@ -1,0 +1,47 @@
+@import '../../core/styles/variables.scss';
+.project {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.project-info {
+  border: 1px solid $gray;
+  width: 100%;
+  min-width: 300px;
+}
+
+.project-resources {
+  width: 100%;
+}
+
+.project-info-cell {
+  margin: 20px 0;
+  width: 50%;
+  text-align: center;
+}
+
+
+.project-cell {
+  align-items: center;
+  border-bottom: 1px solid $gray;
+  border-left: 1px solid $gray;
+  display: flex;
+  flex-shrink: 0;
+  height: 60px;
+  justify-content: center;
+  padding: 0 2px;
+  width: 33.33%;
+}
+
+.project-table {
+  align-items: center;
+  text-align: center;
+  user-select: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  flex-wrap: nowrap;
+}
